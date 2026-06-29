@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>can-i-be-phished — can a scammer fake an email from your hospital, school, or charity?</title>
+    <meta
+      name="description"
+      content="Paste any organization's domain and instantly see whether a scammer can send email that looks like it came from them. Plus a leaderboard of trusted institutions — children's hospitals, charities, schools — that don't block impersonation. Public DNS, no API key, runs in your browser."
+    />
+    <meta property="og:title" content="can-i-be-phished 🎣" />
+    <meta property="og:description" content="Can a scammer fake an email from your hospital, school, or charity? Checks any domain's DMARC. Public DNS, runs in your browser." />
+    <script type="module" crossorigin src="./assets/index-XaLhWCHa.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-Djz8hPg6.css">
+  </head>
+  <body>
+    <header>
+      <h1>can-i-be-phished <span class="hook">🎣</span></h1>
+      <p class="tagline">Can a scammer send email that looks like it's from <strong>your hospital, school, or charity?</strong></p>
+      <p class="sub">It checks whether a domain enforces DMARC — the setting that stops anyone from forging its address. Public DNS, runs in your browser, nothing about you is sent anywhere.</p>
+
+      <form id="check" class="check">
+        <input id="domain" type="text" placeholder="a domain — stjude.org, harvard.edu, irs.gov…" spellcheck="false" autocapitalize="off" autocomplete="off" />
+        <button id="go" type="submit">check</button>
+      </form>
+      <div id="status" class="status"></div>
+      <div id="result" class="result"></div>
+    </header>
+
+    <main>
+      <section class="board-wrap">
+        <h2>🎣 Trusted institutions a scammer could impersonate <span class="dim" id="board-sub"></span></h2>
+        <div id="board" class="board"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Powered by <a href="https://www.npmjs.com/package/can-i-be-phished"><code>can-i-be-phished</code></a> —
+        same engine in your terminal: <code>npx can-i-be-phished stjude.org</code>.
+        <a href="https://github.com/didrod205/can-i-be-phished">GitHub</a> · MIT
+      </p>
+      <p class="dim"><strong>Spoofable</strong> means a forged "From: this domain" can reach inboxes — a fact about the domain's published DNS, <em>not</em> a claim that it was hacked or that mail is being forged today. It's a fixable config (set <code>p=reject</code>). Public DNS only; the leaderboard auto-updates daily.</p>
+    </footer>
+
+  </body>
+</html>

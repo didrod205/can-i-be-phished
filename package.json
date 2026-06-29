@@ -1,0 +1,70 @@
+{
+  "name": "can-i-be-phished",
+  "version": "0.1.0",
+  "description": "Can a scammer send email that looks like it came from your hospital, school, or charity? Checks any domain's DMARC/SPF and tells you if it can be spoofed — plus a leaderboard of trusted institutions that don't block impersonation. Public DNS, no API key, runs anywhere.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "bin": {
+    "can-i-be-phished": "./dist/cli.js",
+    "phishcheck": "./dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsup",
+    "build:web": "vite build",
+    "build:data": "node dist/build-data.js",
+    "dev": "vite",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "lint": "tsc --noEmit",
+    "example": "node dist/cli.js salvationarmyusa.org",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "dmarc",
+    "spf",
+    "email-spoofing",
+    "phishing",
+    "security",
+    "dns",
+    "transparency",
+    "no-api-key",
+    "cli"
+  ],
+  "author": "didrod205 (https://github.com/didrod205)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/didrod205/can-i-be-phished.git"
+  },
+  "bugs": {
+    "url": "https://github.com/didrod205/can-i-be-phished/issues"
+  },
+  "homepage": "https://github.com/didrod205/can-i-be-phished#readme",
+  "dependencies": {
+    "cac": "^6.7.14",
+    "picocolors": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "vite": "^5.4.21",
+    "vitest": "^2.1.8"
+  }
+}
