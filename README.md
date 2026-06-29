@@ -105,3 +105,9 @@ MIT © [didrod205](https://github.com/didrod205)
 ---
 
 <sub>It's a public DNS record and a one-line fix. This just shows who hasn't shipped it. Judge for yourself.</sub>
+
+## 💖 Sponsor
+
+Find this useful? [**Sponsor on GitHub**](https://github.com/sponsors/didrod205) — it keeps these projects maintained.
+
+[![Sponsor](https://img.shields.io/badge/Sponsor-GitHub-db61a2?logo=githubsponsors&logoColor=white)](https://github.com/sponsors/didrod205)
